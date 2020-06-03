@@ -28,6 +28,7 @@ class SerialGenerator:
         self.num = None
 
     def generate(self):
+        """Generates next sequential numnber"""
 
         if self.num:
 
@@ -40,6 +41,7 @@ class SerialGenerator:
         return self.num
 
     def reset(self):
+        """Resets number back to original start number"""
 
         self.num = None
 
