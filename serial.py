@@ -1,8 +1,9 @@
 """Python serial number generator."""
 
+
 class SerialGenerator:
     """Machine to create unique incrementing serial numbers.
-    
+
     >>> serial = SerialGenerator(start=100)
 
     >>> serial.generate()
@@ -20,3 +21,24 @@ class SerialGenerator:
     100
     """
 
+    def __init__(self, start):
+
+        self.start = start
+
+        self.num = None
+
+    def generate(self):
+
+        if self.num:
+
+            self.num += 1
+
+        else:
+
+            self.num = self.start
+
+        return self.num
+
+    def reset(self):
+
+        self.num = None
