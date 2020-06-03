@@ -42,3 +42,15 @@ class SerialGenerator:
     def reset(self):
 
         self.num = None
+
+    def __repr__(self):
+
+        if self.num:
+
+            next = self.num + 1
+
+        else:
+
+            next = self.start + 1
+
+        return f"<SerialGenerator start={self.start} next={next}>"
